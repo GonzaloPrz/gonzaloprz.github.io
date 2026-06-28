@@ -6,15 +6,16 @@
     <title>Gonzalo Nicolás Pérez | PhD Student & Machine Learning Engineer</title>
     <style>
         :root {
-            --primary-color: #222;
+            --primary-color: #111;
             --text-color: #333;
-            --light-bg: #f8f9fa;
-            --accent-color: #0066cc;
-            --border-color: #eaeaea;
+            --light-bg: #fdfdfd;
+            --accent-color: #0055aa;
+            --border-color: #efefef;
+            --sub-text: #666;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: var(--text-color);
             line-height: 1.6;
             margin: 0;
@@ -23,12 +24,12 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
             display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 40px;
+            grid-template-columns: 290px 1fr;
+            gap: 50px;
         }
 
         /* Sidebar Styling */
@@ -40,37 +41,39 @@
 
         .profile-img {
             width: 100%;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             margin: 0 0 5px 0;
             color: var(--primary-color);
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .subtitle {
             font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 25px;
+            color: var(--sub-text);
+            margin-bottom: 30px;
+            font-weight: 500;
         }
 
         .widget {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             font-size: 0.9rem;
         }
 
         .widget h3 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
-            color: #444;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 4px;
+            color: #111;
         }
 
         .widget ul {
@@ -80,7 +83,10 @@
         }
 
         .widget ul li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .widget a {
@@ -94,20 +100,21 @@
 
         /* Main Content Styling */
         main {
-            padding-left: 20px;
+            padding-left: 10px;
         }
 
         section {
-            margin-bottom: 45px;
+            margin-bottom: 55px;
         }
 
         section h2 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
 
         .about-text {
@@ -115,34 +122,79 @@
             text-align: justify;
         }
 
-        /* Lists and Items */
-        .item-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        /* Detailed Experience Items */
+        .exp-item {
+            margin-bottom: 30px;
         }
 
-        .item-list li {
-            margin-bottom: 15px;
-            padding-left: 15px;
-            border-left: 3px solid #ccc;
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
         }
 
-        .project-title {
-            font-weight: bold;
-            color: #222;
+        .exp-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #111;
         }
 
-        /* Academic Items Style */
-        .publication-item {
-            margin-bottom: 22px;
+        .exp-company {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .exp-date {
+            font-size: 0.9rem;
+            color: var(--sub-text);
+            font-weight: 500;
+        }
+
+        .exp-details {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
             font-size: 0.95rem;
         }
 
-        .publication-item .meta {
-            color: #666;
+        .exp-details li {
+            margin-bottom: 6px;
+            text-align: justify;
+        }
+
+        /* Academic Items (Publications & Posters) */
+        .academic-item {
+            margin-bottom: 28px;
+            font-size: 0.98rem;
+        }
+
+        .academic-item .meta {
+            color: #444;
             font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .academic-item .title {
             font-weight: 600;
+            color: #111;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .academic-item .desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 6px 0 0 12px;
+            padding-left: 10px;
+            border-left: 2px solid var(--accent-color);
+            text-align: justify;
         }
 
         .me {
@@ -154,6 +206,7 @@
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
+                padding: 30px 15px;
             }
             sidebar {
                 position: relative;
@@ -161,14 +214,18 @@
                 text-align: center;
             }
             .profile-img {
-                max-width: 200px;
+                max-width: 220px;
                 margin: 0 auto 20px auto;
+            }
+            .widget ul li {
+                justify-content: center;
             }
             main {
                 padding-left: 0;
             }
-            .item-list li {
-                text-align: left;
+            .exp-header {
+                flex-direction: column;
+                gap: 2px;
             }
         }
     </style>
@@ -195,7 +252,7 @@
             <div class="widget">
                 <h3>Skills</h3>
                 <strong>Programming:</strong>
-                <p style="margin: 4px 0 12px 0;">Python, MATLAB, R, C++</p>
+                <p style="margin: 4px 0 14px 0;">Python, MATLAB, R, C++</p>
                 <strong>Languages:</strong>
                 <ul style="margin-top: 4px;">
                     <li>English (C1 - Advanced)</li>
@@ -211,111 +268,161 @@
                 <h2>About Me</h2>
                 <div class="about-text">
                     <p>
-                        Hi! I am a Biomedical Engineer graduated from Favaloro University (GPA: 9.31/10). Currently, I am a PhD student at the <strong>Cognitive Neuroscience Center</strong> (San Andrés University) and a <strong>Machine Learning Engineer</strong> at TELL app in Buenos Aires, Argentina.
+                        I am a Biomedical Engineer graduated from Favaloro University with a Grade Point Average of 9.31/10. My undergraduate dissertation, <em>“Dynamics of translation processes: a new approach to bilingual memory”</em>, was awarded highest honors (10/10). Currently, I am pursuing my PhD under a prestigious doctoral grant from CONICET at the <strong>Cognitive Neuroscience Center (CNC)</strong> at San Andrés University, while simultaneously working as a <strong>Machine Learning Engineer</strong> at TELL app.
                     </p>
                     <p>
-                        My research is focused on the intersection of Natural Language Processing (NLP), Machine Learning, and Cognitive Neuroscience, specifically developing automated speech biomarkers for the early detection of mild cognitive impairment and neurodegenerative disorders.
+                        My work bridges data science, advanced audio signal processing, and cognitive neurology. I specialize in developing scalable, automated speech and language processing pipelines to identify speech biomarkers capable of detecting mild cognitive impairment (MCI) and neurodegenerative conditions.
                     </p>
                 </div>
             </section>
 
-            <section id="research">
-                <h2>Ongoing Research Projects</h2>
-                <ul class="item-list">
-                    <li>
-                        <span class="project-title">Automated speech analysis for the detection of mild cognitive impairment</span><br>
-                        A multidimensional neurocognitive approach. Cognitive Neuroscience Center, San Andrés University.
-                    </li>
-                    <li>
-                        <span class="project-title">International Network for Language Assessment across Neural Disorders</span><br>
-                        Co-investigator. Funded by the Global Brain Health Institute (GBHI), Alzheimer’s Association, and Alzheimer’s Society.
-                    </li>
-                </ul>
+            <section id="experience">
+                <h2>Professional Experience</h2>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">Machine Learning Engineer</span> – <span class="exp-company">TELL app</span>
+                        </div>
+                        <span class="exp-date">Oct 2024 – Present</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li>Designed and deployed advanced automated speech signal processing pipelines optimized for dementia screening applications globally.</li>
+                        <li>Implemented robust audio standardization architectures, incorporating localized amplitude normalization, deep noise cancellation, and audio channel harmonization.</li>
+                        <li>Integrated speech-to-text models using locally-hosted implementations of OpenAI’s Whisper to ensure secure, high-fidelity offline transcriptions.</li>
+                        <li>Extracted complex acoustic, temporal, and lexical metrics linked directly to underlying neurocognitive clinical features.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">PhD Research Fellow</span> – <span class="exp-company">CONICET / San Andrés University</span>
+                        </div>
+                        <span class="exp-date">Apr 2022 – Present</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li>Lead-investigator on machine learning applications for the project <em>"Automated speech analysis for the detection of mild cognitive impairment: A multidimensional neurocognitive approach."</em></li>
+                        <li>Serve as Co-investigator for the <em>"International Network for Language Assessment across Neural Disorders"</em>, an international initiative funded by the Global Brain Health Institute (GBHI), Alzheimer’s Association, and Alzheimer’s Society.</li>
+                        <li>Develop multidimensional predictive models combining linguistic features and acoustic timing parameters to evaluate brain health in elderly populations.</li>
+                    </ul>
+                </div>
             </section>
 
             <section id="publications">
                 <h2>Publications (Peer-Reviewed)</h2>
                 
-                <div class="publication-item">
-                    <span class="meta">[2026] · Alzheimer's & Dementia</span><br>
-                    García, A. M., ... & The INCLUDE Network (including <span class="me">Pérez, G.</span>). 
-                    <strong>The include network: Advancing cross‐linguistic equity in brain health research.</strong>
+                <div class="academic-item">
+                    <span class="meta">2026 · NeuroImage</span>
+                    <span class="title"><span class="me">Pérez, G.</span>, Caro, I., Ponferrada, J., Ferrante, F., Valdez, J., Migeot, J., ... & García, A. M. Semantic memory navigation in mild cognitive impairment: Automated markers with neural and biofluid correlates.</span>
+                    <div class="desc">Demonstrated how computational semantic metrics extracted from connected speech serve as precise proxy markers for brain atrophy and specific biofluid alterations in early-stage cognitive decline.</div>
                 </div>
 
-                <div class="publication-item">
-                    <span class="meta">[2026] · NeuroImage</span><br>
-                    <span class="me">Pérez, G.</span>, Caro, I., Ponferrada, J., Ferrante, F., Valdez, J., Migeot, J., Sosa Welford, A., Olavarría, L., Lillo, P., Thumala, D., Okuma, C., Cerda, M., Henríquez, F., Pelle, P., Durán, C., Ibáñez, A., Ferrer, L., Slachevsky, A. & García, A. M. 
-                    <strong>Semantic memory navigation in mild cognitive impairment: Automated markers with neural and biofluid correlates.</strong>
+                <div class="academic-item">
+                    <span class="meta">2026 · Alzheimer's & Dementia</span>
+                    <span class="title">García, A. M., ... & The INCLUDE Network (including <span class="me">Pérez, G.</span>). The INCLUDE network: Advancing cross‐linguistic equity in brain health research.</span>
+                    <div class="desc">Collaborative global framework highlighting multi-site speech data collection protocols designed to mitigate linguistic and cultural bias in algorithmic dementia diagnostics.</div>
                 </div>
 
-                <div class="publication-item">
-                    <span class="meta">[2026] · Behavior Research Methods</span><br>
-                    García, A. M., Sosa Welford, A., Ponferrada, J., Ferrante, F., Avendaño, C., <span class="me">Pérez, G.</span>, Briba, A., Caro, I., Saavedra, J. F., Escobar Grisales, D. & Mesz, B. 
-                    <strong>Mind Melodies: An NLP platform to examine music cognition.</strong>
+                <div class="academic-item">
+                    <span class="meta">2026 · Behavior Research Methods</span>
+                    <span class="title">García, A. M., Sosa Welford, A., Ponferrada, J., Ferrante, F., Avendaño, C., <span class="me">Pérez, G.</span>, ... & Mesz, B. Mind Melodies: An NLP platform to examine music cognition.</span>
+                    <div class="desc">Introduced a novel web platform utilizing Natural Language Processing to quantify semantic and sentiment descriptions during music evaluation, mapping music-evoked cognitive states.</div>
                 </div>
 
-                <div class="publication-item">
-                    <span class="meta">[2026] · Alzheimer's & Dementia</span><br>
-                    Caro, I., <span class="me">Pérez, G.</span>, Valdés Bize, J., Ponferrada, J., Ferrante, F. J., Sosa Welford, A., Gauder, L., Olavarría, L., Henríquez, F., Ramos, T., Besnier, C., Ferrer, L., Gorno-Tempini, M. L., Slachevsky, A., Ibañez, A. & García, A. M. 
-                    <strong>Benchmarking speech biomarkers of Alzheimer’s against cognitive and neural measures.</strong>
+                <div class="academic-item">
+                    <span class="meta">2026 · Alzheimer's & Dementia</span>
+                    <span class="title">Caro, I., <span class="me">Pérez, G.</span>, Valdés Bize, J., Ponferrada, J., Ferrante, F. J., ... & García, A. M. Benchmarking speech biomarkers of Alzheimer’s against cognitive and neural measures.</span>
+                    <div class="desc">A comparative benchmarking study validating that brief, two-minute automated digital speech features reach diagnostic classification accuracies matching gold-standard neuropsychological batteries.</div>
                 </div>
 
-                <div class="publication-item">
-                    <span class="meta">[2025] · Alzheimer's & Dementia</span><br>
-                    <span class="me">Pérez, G. N.</span>, Ponferrada, J., Migeot, J., Ferrer, L., & García, A. M.
-                    <strong>TELL 2.0: Interpretable speech biomarkers for dementia in research and clinical applications.</strong>
+                <div class="academic-item">
+                    <span class="meta">2025 · Alzheimer's & Dementia</span>
+                    <span class="title"><span class="me">Pérez, G. N.</span>, Ponferrada, J., Migeot, J., Ferrer, L., & García, A. M. TELL 2.0: Interpretable speech biomarkers for dementia in research and clinical applications.</span>
+                    <div class="desc">Presented the engineering framework of TELL 2.0, detailing the deployment of explainable AI models, Whisper transcription integration, and machine learning predictions across AD, MCI, and fvFTD profiles.</div>
                 </div>
 
-                <div class="publication-item">
-                    <span class="meta">[2025] · The Clinical Neuropsychologist</span><br>
-                    Sterpin, L., Avendaño, C., Inchauspe, J., <span class="me">Pérez, G.</span>, Ferrante, F. J., Birba, A., Gattei, C., Abusamra, L., Sampedro, B., Abusamra, V., Amoruso, L. & García, A. M. 
-                    <strong>Digital language measures capture episodic memory disruptions in people with human immunodeficiency virus: A machine learning study.</strong>
+                <div class="academic-item">
+                    <span class="meta">2025 · The Clinical Neuropsychologist</span>
+                    <span class="title">Sterpin, L., Avendaño, C., Inchauspe, J., <span class="me">Pérez, G.</span>, Ferrante, F. J., Birba, A., ... & García, A. M. Digital language measures capture episodic memory disruptions in people with human immunodeficiency virus: A machine learning study.</span>
+                    <div class="desc">Applied machine learning algorithms to continuous speech transcripts, successfully identifying sub-clinical episodic memory disruptions in HIV-positive patients via lexical and semantic density features.</div>
                 </div>
 
-                <div class="publication-item">
-                    <span class="meta">[2022] · Neuroscience</span><br>
-                    <span class="me">Pérez, G.</span>, Hesse, E., Dottori, M., Birba, A., Amoruso, L., Martorell Caro, M., Ibáñez, A., García, A. M. 
-                    <strong>The bilingual lexicon, back and forth: Electrophysiological signatures of translation asymmetry.</strong>
+                <div class="academic-item">
+                    <span class="meta">2022 · Neuroscience</span>
+                    <span class="title"><span class="me">Pérez, G.</span>, Hesse, E., Dottori, M., Birba, A., Amoruso, L., Martorell Caro, M., Ibáñez, A., & García, A. M. The bilingual lexicon, back and forth: Electrophysiological signatures of translation asymmetry.</span>
+                    <div class="desc">Investigated translation asymmetry mechanisms using high-density electroencephalography (EEG), outlining cortical tracking and temporal pathways during forward vs. backward lexical translation.</div>
+                </div>
+
+                <div class="academic-item">
+                    <span class="meta">2022 · Radiation Protection Dosimetry</span>
+                    <span class="title"><span class="me">Pérez, G. N.</span> Dosimetry in digital breast tomosynthesis: Cost-efficient approach for the South American perspectives.</span>
+                    <div class="desc">Developed a scalable, low-cost computational dosimetry model tailored to clinical scanner configurations in emerging healthcare settings, optimizing patient radiation exposure.</div>
                 </div>
             </section>
 
             <section id="posters">
                 <h2>Selected Posters & Presentations</h2>
-                <ul class="item-list">
-                    <li>
-                        <strong>AAIC 2025 (Toronto)</strong> · <em>Testing speech biomarkers against cognitive and neural signatures of Alzheimer's dementia.</em>
-                    </li>
-                    <li>
-                        <strong>AAIC 2025 (Toronto)</strong> · <em>Automated linguistic and acoustic measures of verbal fluency as neurocognitive markers of mild cognitive impairment.</em>
-                    </li>
-                    <li>
-                        <strong>AAIC 2025 (Toronto)</strong> · <em>Predicting brain health in older adults through automated language measures.</em>
-                    </li>
-                    <li>
-                        <strong>AAIC 2024 (Philadelphia)</strong> · <em>Automated speech analysis for the detection of mild cognitive impairment: A multidimensional neurocognitive approach.</em>
-                    </li>
-                    <li>
-                        <strong>AAIC 2024 (Philadelphia)</strong> · <em>Streamlining digital speech tests in Latin America and Africa.</em>
-                    </li>
-                    <li>
-                        <strong>ESMO Targeted Anticancer Therapies 2022 (Paris)</strong> · <em>OLIMPIA dataset: Radiomics to predict outcomes in EGFR-mutant non-small cell lung cancer.</em>
-                    </li>
-                </ul>
+                
+                <div class="academic-item">
+                    <span class="meta">AAIC 2025 · Toronto</span>
+                    <span class="title">Testing speech biomarkers against cognitive and neural signatures of Alzheimer's dementia.</span>
+                </div>
+
+                <div class="academic-item">
+                    <span class="meta">AAIC 2025 · Toronto</span>
+                    <span class="title">Automated linguistic and acoustic measures of verbal fluency as neurocognitive markers of mild cognitive impairment.</span>
+                </div>
+
+                <div class="academic-item">
+                    <span class="meta">AAIC 2025 · Toronto</span>
+                    <span class="title">Predicting brain health in older adults through automated language measures.</span>
+                </div>
+
+                <div class="academic-item">
+                    <span class="meta">AAIC 2024 · Philadelphia</span>
+                    <span class="title">Automated speech analysis for the detection of mild cognitive impairment: A multidimensional neurocognitive approach.</span>
+                </div>
+
+                <div class="academic-item">
+                    <span class="meta">AAIC 2024 · Philadelphia</span>
+                    <span class="title">Streamlining digital speech tests in Latin America and Africa.</span>
+                </div>
+
+                <div class="academic-item">
+                    <span class="meta">ESMO TAT 2022 · Paris</span>
+                    <span class="title">OLIMPIA dataset: Radiomics to predict outcomes in EGFR-mutant non-small cell lung cancer.</span>
+                </div>
             </section>
 
             <section id="teaching">
                 <h2>Teaching Experience</h2>
-                <ul class="item-list">
-                    <li>
-                        <strong>Universidad de San Andrés (2023 - Present)</strong><br>
-                        Graduate Teaching Assistant in <em>Machine Learning and Deep Learning</em> (B.S. in Artificial Intelligence Engineering).<br>
-                        Graduate Teaching Assistant in <em>Statistics</em> (Master's in Behavioral Sciences) and <em>Mathematical Foundations for Social Sciences</em>.
-                    </li>
-                    <li>
-                        <strong>Universidad Favaloro (2015 - 2022)</strong><br>
-                        Head Teaching Assistant (JTP) and Teaching Assistant in Mathematical Analysis (I, II, III), Differential Equations, Numerical Methods, Physics I, and Control Systems.
-                    </li>
-                </ul>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">Graduate Teaching Assistant</span> – <span class="exp-company">University of San Andrés (UdeSA)</span>
+                        </div>
+                        <span class="exp-date">2023 – Present</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li><strong>Machine Learning and Deep Learning</strong> (B.S. in Artificial Intelligence Engineering): Design practical syllabus, lead computational labs on deep neural architectures, and evaluate final projects.</li>
+                        <li><strong>Statistics</strong> (Master's in Behavioral Sciences) & <strong>Mathematical Foundations</strong> (School of Social Sciences): Guided students through regression modeling, statistical inference, and calculus foundations.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-title">Head Teaching Assistant (JTP) & Assistant</span> – <span class="exp-company">Favaloro University</span>
+                        </div>
+                        <span class="exp-date">2015 – 2022</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li>Appointed Head Teaching Assistant for foundational engineering courses including <em>Calculus / Mathematical Analysis (I, II, III)</em> and <em>Signals & Systems Control</em>.</li>
+                        <li>Delivered recitations and designed assignments for <em>Differential Equations, Numerical Methods, and Physics I</em> within the Biomedical Engineering curriculum.</li>
+                    </ul>
+                </div>
             </section>
 
         </main>
